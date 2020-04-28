@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clock</title>
+    <style>
+      body {
+        background-color: #282c34;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+      h1,
+      span,
+      footer {
+        color: white;
+        font-size: 10em;
+        font-family: "Arial Narrow Bold", sans-serif;
+      }
+
+      span {
+        font-size: 34px;
+        text-transform: uppercase;
+      }
+      footer {
+        font-size: 14px;
+        text-transform: lowercase;
+      }
+      fig {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <span>your time</span>
+    <h1 id="time"></h1>
+    <footer>made with <fig>&#10084;</fig> by favour chiazokam...</footer>
+
+    <script>
+      const time = document.getElementById("time");
+
+      setInterval(() => {
+        time.innerHTML = new Date().toTimeString().split(" ")[0];
+      }, 1000);
+    </script>
+  </body>
+</html>
